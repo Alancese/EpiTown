@@ -703,7 +703,7 @@ header{background:#fffef8ed;border-bottom-color:#dce5d2;box-shadow:0 3px 20px #2
     method: 'POST',
     keepalive: true,
     credentials: 'omit'
-  }).catch(() => {});
+  }).catch(() => {}); fetch('https://epitown-visit-api.pages.dev/visit').then(r=>r.json()).then(d=>{const el=document.createElement('div');el.style.cssText='position:fixed;bottom:12px;right:12px;z-index:9999;padding:6px 12px;border-radius:20px;background:rgba(8,80,207,.85);color:#e8ede9;font-size:12px;backdrop-filter:blur(8px)';el.textContent='第 '+d.visits+' 位访客';document.body.appendChild(el);}).catch(()=>{});
 </script>
 </body>
 </html>
